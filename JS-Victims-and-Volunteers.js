@@ -1,0 +1,1 @@
+prompt("How many Disaster Victims are there?");
