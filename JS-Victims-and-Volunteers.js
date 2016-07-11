@@ -22,13 +22,40 @@ var victimsList = Info("Victim");
 var volunList = Info("Volunteer");
 
 
+//Dummy Data
+var vic1 = [{
+	name: "Kyle",
+	phone: 4242,
+	street: "104th",
+},{
+	name: "Talbot",
+	phone: 4242,
+	street: "104th",
+},
+{
+	name: "Daulton",
+	phone: 4242,
+	street: "104th",
+}]
+
+var vol1 = [{
+	name: "Clay",
+	phone: 54353,
+	street: "104th"
+},
+{
+	name: "Andy",
+	phone: 54353,
+	street: "105th"
+}]
+
 var personNeed = prompt("Please enter the name of the person in need.");
 
 function find(vol, vic, name) {
 	var nameList = []
-	for(var i = 0; i < vic.length; i++){
-		if(vic[i].name === name)
-		 nameList.push(vic[i].name)
+	for(var i = 0; i < vic1.length; i++){
+		if(vic1[i].name === name)
+		 nameList.push(vic1[i].name)
 		}
 		
 		
@@ -38,13 +65,13 @@ function find(vol, vic, name) {
 		return alert("We could not find anyone with the name of "+ name)
 	}
 	
-	var vicStreet = (vic[0].street);
+	var vicStreet = (vic1[0].street);
 	console.log(found)
 	
 	var volList = []
-	for(var j = 0; j < vol.length; j++){
-		if (vicStreet === vol[j].street){
-			volList.push(vol[j].name)
+	for(var j = 0; j < vol1.length; j++){
+		if (vicStreet === vol1[j].street){
+			volList.push(vol1[j].name)
 		}
 	}
 	
